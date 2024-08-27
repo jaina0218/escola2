@@ -6,16 +6,16 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Você presencia uma ação de cyberbullying. O que você faz sobre?",
+        enunciado: "Você presencia uma situação de violência domestica em sua casa, o que deve fazer?",
 
         alternativas: [
             {
-                texto:"Reportar a situação a um responsável.",
-                afirmacao: "Você é contra o Bullying porém prefere não se envolver diretamente delegando essa responsabilidade a uma autoridade que você julga competente."
+                texto:"Ligar para a polícia.",
+                afirmacao: "Você é contra violências porém prefere não se envolver no assunto pois acha perigoso, e pode sair machucado."
             },
             {
-                texto: "Tenta inibir o ato enquanto está ocorrendo.",
-                afirmacao:"Você é o tipo de pessoa que não se cala diante da injustiça e faz de tudo o que está ao seu alcance para preservar um ambiente saudável e sem discriminações."
+                texto: "Tenta segurar o agressor enquanto ele bate, para defender sua mãe.",
+                afirmacao:"Você é uma pessoa corajosa, e não tem medo do perigo."
 
             }   
            
@@ -31,8 +31,7 @@ const perguntas = [
             {
                 texto:  "Discordo, pois os altos custos do processo acaba  inviabilizando o mesmo.",
                 afirmacao: "Você é uma pessoa que se preocupa com a questão econômica, prezando o valor  dinheiro."
-            }   
-            
+            }               
         ]
     },
     {
@@ -60,10 +59,35 @@ function mostraPergunta(){
     if(atual >= perguntas.length){
         mostraResultado();
         return;
-    }
-    perguntaAtual = perguntas[atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent = "";
+        <!DOCTYPE html>
+        <html lang="pt-br">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+            <title>Você decide o futuro da IA</title>
+        </head>
+        <body>
+            <div class="caixa-principal">
+                <h1>Você decide o futuro do IA</h1>
+                <div class="caixa-perguntas">
+                    Você já sabe quais são as perguntas que irão nortear sua missão ?
+                </div>
+                <div class="caixa-alternativas">
+                    <button>Sim, eu já sei</button>
+                    <button>Não, estou ajustando algumas coias</button>
+                </div>
+                <div class="caixa-resultado">
+                    <p class="texto-resultado">
+                        E o seu texto final, já está pronto ?
+                    </p>
+                </div>
+            </div>
+            <script src="script.js"></script>
+        </body>
+        </html>
+        
+           caixaAlternativas.textContent = "";
     textoResultado.textContent = "";
     mostraAlternativas();
 }
